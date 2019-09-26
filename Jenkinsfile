@@ -39,7 +39,7 @@ pipeline {
             script {
               unstash 'build-test-artifacts'
 
-              def server = Artifactory.server 'Artifactory'
+              def server = Artifactory.server 'artifactory'
               def uploadSpec = """{
                 "files": [
                   {
