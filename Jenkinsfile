@@ -4,7 +4,7 @@ pipeline {
     stage('Build & Test') {
       agent {
         node {
-          label 'docker'
+          label 'docker-jenkins'
         }
 
       }
@@ -18,7 +18,7 @@ pipeline {
         stage('Report & Publish') {
           agent {
             node {
-              label 'docker'
+              label 'docker-jenkins'
             }
 
           }
@@ -31,7 +31,7 @@ pipeline {
         stage('Publish to Artifactory') {
           agent {
             node {
-              label 'docker'
+              label 'docker-jenkins'
             }
 
           }
