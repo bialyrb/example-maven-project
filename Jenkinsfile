@@ -22,6 +22,9 @@ pipeline {
             }
 
           }
+          environment {
+            customWorkspace = '/tmp'
+          }
           steps {
             unstash 'build-test-artifacts'
             junit '**/target/surefire-reports/TEST-*.xml'
